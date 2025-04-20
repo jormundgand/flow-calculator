@@ -111,12 +111,12 @@ function InputForm() {
 
       <h2 className="text-lg mt-4 font-bold">Printer Settings</h2>
       <div className ="grid grid-cols-2 gap-x-8">
-        <Select value="filamentDiameter" label="Filament Diameter" register={register("filamentDiameter", { required: true, valueAsNumber: true })}
+        <Input
+            value="filamentDiameter"
+            label="Filament Diameter"
+            defaultValue="1.75"
+            register={register("filamentDiameter", { required: true, valueAsNumber: true })}
           description="Diameter of filament used"
-          options={[
-            {value: 1.75, label: "1.75mm"},
-            {value: 2.85, label: "2.85mm"}
-          ]}
         />
 
         <Input type="number" value="travelSpeed" label="Travel Speed" unit="mm/s"
